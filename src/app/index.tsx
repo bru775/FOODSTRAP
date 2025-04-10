@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { styles } from './login';
+import { Link } from 'expo-router';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -34,12 +35,13 @@ export default function Login() {
                 onChangeText={setPassword}
                 secureTextEntry
             />
+            <Link href={"/home/page"} asChild>
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
+            </TouchableOpacity></Link>
+            <Link href={"/Cadastro/page"} asChild><TouchableOpacity>
                 <Text style={styles.link}>Não tem uma conta? Cadastre-se</Text>
-            </TouchableOpacity>
+            </TouchableOpacity></Link>
         </View>
     );
 }

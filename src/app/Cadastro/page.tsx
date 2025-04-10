@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { styles } from './cadastro';
+import { styles } from './style';
 
 export default function cadastro() {
     const [nome, setName] = useState('');
