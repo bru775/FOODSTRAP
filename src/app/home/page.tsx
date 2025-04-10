@@ -1,30 +1,38 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View, ScrollView } from "react-native";
-import { styles } from "./style"
+import { styles } from "./style";
+import React from "react";
  
-export default function Index() {
+export default function index() {
     const MENU = [
         {
             id: 1,
             name: "Fraldinha",
-            description: "4 fraldinhas bem feitas",
-            price: 139.90,
+            description: "Prato com 4 carnes fraldinhas com arroz e feijão",
+            price: 139.9,
             image: require("../../assets/images/Fraldinha.jpg")
         },
         {
             id: 2,
             name: "Carne de porco",
-            description: "Carne de porco com mistura",
+            description: "Carne de porco com salada de alface e repolho , e  arroz",
             price: 49.90,
             image: require("../../assets/images/carneporco.jpg")
         },
         {
             id: 3,
             name: "Colxão mole",
-            description: "Colxão mole recheado",
+            description: "Colxão mole recheado com cheiro verde e molho de mostarda",
             price: 34.90,
             image: require("../../assets/images/colxãomole.jpg")
+        },
+        {
+            id: 4,
+            name: "Hambuguer",
+            description: "Lanche com hambuguer,bancon,mussarela e tomate ",
+            price: 25.50,
+            image: require("../../assets/images/abuguer.png")
         }
-    ]
+    ];
     return (
         <View style={styles.container}>
             <View style={styles.header}>
