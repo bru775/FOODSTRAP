@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { styles } from './login';
 import { Link } from 'expo-router';
+
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -19,7 +20,10 @@ export default function Login() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Login</Text>
+            <Image style={styles.headerImage} source={require("../assets/images/lugar.png")}></Image>
+            <Text style={styles.headerText}>Bem-vindo de volta!</Text>
+            <Text style={styles.subHeaderText}>Faça login para continuar</Text>
+            
             <TextInput
                 style={styles.input}
                 placeholder="Email"
@@ -30,7 +34,7 @@ export default function Login() {
             />
             <TextInput
                 style={styles.input}
-                placeholder="Password"
+                placeholder="Senha"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
